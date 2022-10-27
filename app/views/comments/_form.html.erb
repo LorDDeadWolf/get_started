@@ -3,7 +3,7 @@ true) do |form| %>
     
     <p>
         <%= form.label :user_id %><br>
-        <%= form.text_field :user_id %>
+        <%= form.select :user_id, User.all.map { |user| [user.name, user.id]} %>
     </p>
     
     <p>
